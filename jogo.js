@@ -1,10 +1,10 @@
-var altura = 0
 var largura = 0
+var altura = 0
 
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
-    console.log(largura, altura)
+    console.log(altura, largura)
 }
 ajustaTamanhoPalcoJogo()
 
@@ -19,13 +19,14 @@ function posicaoRandomica(){
     // Criar o elemento html
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosquito.png'
-    mosquito.className = tamanhoAleatorio()
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     mosquito.style.left = posicaox + 'px'
     mosquito.style.top = posicaoy + 'px'
     mosquito.style.position = 'absolute'
 
     document.body.appendChild(mosquito)
     console.log(tamanhoAleatorio())
+    console.log(ladoAleatorio())
 }
 
 function tamanhoAleatorio(){
@@ -42,4 +43,17 @@ function tamanhoAleatorio(){
         case 2:
             return 'mosquito3'
     }
+}
+
+function ladoAleatorio(){
+     var classe = Math.floor(Math.random() * 2)
+    console.log(classe)
+
+    switch (classe){
+        case 0:
+            return 'ladoA'
+
+        case 1:
+            return 'ladoB'
+    }    
 }
