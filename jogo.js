@@ -2,12 +2,27 @@ var largura = 0
 var altura = 0
 var vidas = 1
 var tempo = 10
+var criaElementoTempo = 1500
 
 function ajustaTamanhoPalcoJogo(){
     altura = window.innerHeight
     largura = window.innerWidth
     console.log(altura, largura)
 }
+
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+if (nivel === 'normal'){
+    //1500
+    var criaElementoTempo = 1500
+} else if (nivel === 'dificil'){
+    //1000
+    var criaElementoTempo = 1000
+} else if (nivel === 'insano'){
+    //750
+    var criaElementoTempo = 750
+}
+
 ajustaTamanhoPalcoJogo()
 
 var cronometro = setInterval(function(){
