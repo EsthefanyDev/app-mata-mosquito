@@ -13,7 +13,7 @@ function posicaoRandomica(){
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
     }
-    //criando posisões randômicas
+    //criando posições randômicas
     var posicaox = Math.floor(Math.random() * largura) - 90
     var posicaoy = Math.floor(Math.random() * altura) - 90
     posicaox = posicaox < 0 ? 0 : posicaox
