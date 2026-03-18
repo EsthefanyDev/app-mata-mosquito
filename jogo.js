@@ -16,7 +16,7 @@ function posicaoRandomica(){
 
         //console.log('O lemento selecionado foi: v' + vidas)
         if (vidas > 3){
-            alert('Interromper o jogo')
+            window.location.href = 'fim_de_jogo.html'
         } else {
             document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
             vidas++
